@@ -86,7 +86,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="avatars.Designer.vb">
+      <DependentUpon>avatars.vb</DependentUpon>
+    </Compile>
+    <Compile Include="avatars.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Casespanel.vb" />
+    <Compile Include="Detashes.Designer.vb">
+      <DependentUpon>Detashes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Detashes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="avatars.resx">
+      <DependentUpon>avatars.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detashes.resx">
+      <DependentUpon>Detashes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +263,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\credit-card-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\boy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\boy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\boy3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\boy4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\boy5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\girl7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\basededatos\avatars\man1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

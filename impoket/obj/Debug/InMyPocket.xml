@@ -27,12 +27,12 @@ InMyPocket
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.bag_5">
+<member name="P:impoket.My.Resources.Resources.bag5">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.bag_6">
+<member name="P:impoket.My.Resources.Resources.bag6">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -42,7 +42,37 @@ InMyPocket
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.credit_card_2">
+<member name="P:impoket.My.Resources.Resources.boy">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.boy1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.boy2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.boy3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.boy4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.boy5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.creditcard2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -58,6 +88,46 @@ InMyPocket
 </summary>
 </member>
 <member name="P:impoket.My.Resources.Resources.feliz">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl6">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.girl7">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -87,7 +157,12 @@ InMyPocket
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.Microsoft_Access_2013_icon">
+<member name="P:impoket.My.Resources.Resources.man">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:impoket.My.Resources.Resources.MicrosoftAccess2013icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -97,12 +172,12 @@ InMyPocket
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.pie_chart_1">
+<member name="P:impoket.My.Resources.Resources.piechart1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.piggy_bank">
+<member name="P:impoket.My.Resources.Resources.piggybank">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -122,17 +197,17 @@ InMyPocket
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.wallet_1">
+<member name="P:impoket.My.Resources.Resources.wallet1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.wallet_11">
+<member name="P:impoket.My.Resources.Resources.wallet11">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:impoket.My.Resources.Resources.wallet_2">
+<member name="P:impoket.My.Resources.Resources.wallet2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

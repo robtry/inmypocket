@@ -39,7 +39,7 @@ Partial Class SplashScreen
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.impoket.My.Resources.Resources.wallet_1
+        Me.PictureBox3.Image = Global.impoket.My.Resources.Resources.wallet1
         Me.PictureBox3.Location = New System.Drawing.Point(157, 103)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.PictureBox3.Name = "PictureBox3"

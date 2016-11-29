@@ -13,16 +13,16 @@ Public Class Login
         End If
     End Sub
     '========================================Iniciar==================================================
-    Private Sub MetroComboBox1_Click(sender As Object, e As EventArgs) Handles MetroComboBox1.Click
+    Private Sub MetroComboBox1_Click(sender As Object, e As EventArgs)
         usuariosiniciar()
     End Sub
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs)
         If Not MetroComboBox1.Text = "" Then
             ConnectToAccessTry()
         End If
     End Sub
     '==================================Crear Usuario===================================================
-    Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
+    Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs)
         If Not MaterialSingleLineTextField1.Text = "" Then
             If Not System.IO.Directory.Exists(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text) Then
                 Try
@@ -31,6 +31,7 @@ Public Class Login
                     System.IO.File.Copy(CurDir() + "\basededatos\tiposdeingresos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdeingreso.txt", True)
                     System.IO.File.Copy(CurDir() + "\basededatos\tiposdegastos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdegasto.txt", True)
                     System.IO.File.Copy(CurDir() + "\basededatos\tiposdetarjetas.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdetarjeta.txt", True)
+                    System.IO.File.Copy(CurDir() + "\basededatos\avatar.dll", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\avatar.dll", True)
                     My.Computer.FileSystem.WriteAllText(CurDir() + "\basededatos\users.txt", MaterialSingleLineTextField1.Text & vbCrLf, True)
                     MetroMessageBox.Show(Me, "", "Usuario creado con éxito", MessageBoxButtons.OK, MessageBoxIcon.Question)
                     MaterialSingleLineTextField1.Clear()
@@ -47,7 +48,7 @@ Public Class Login
             End If
         End If
     End Sub
-    Private Sub MaterialSingleLineTextField1_KeyDown(sender As Object, e As KeyEventArgs) Handles MaterialSingleLineTextField1.KeyDown
+    Private Sub MaterialSingleLineTextField1_KeyDown(sender As Object, e As KeyEventArgs)
         If e.KeyCode = Keys.Enter Then
             If Not MaterialSingleLineTextField1.Text = "" Then
                 If Not System.IO.Directory.Exists(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text) Then
@@ -57,6 +58,7 @@ Public Class Login
                         System.IO.File.Copy(CurDir() + "\basededatos\tiposdeingresos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdeingreso.txt", True)
                         System.IO.File.Copy(CurDir() + "\basededatos\tiposdegastos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdegasto.txt", True)
                         System.IO.File.Copy(CurDir() + "\basededatos\tiposdetarjetas.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdetarjeta.txt", True)
+                        System.IO.File.Copy(CurDir() + "\basededatos\avatar.dll", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\avatar.dll", True)
                         My.Computer.FileSystem.WriteAllText(CurDir() + "\basededatos\users.txt", MaterialSingleLineTextField1.Text & vbCrLf, True)
                         MetroMessageBox.Show(Me, "", "Usuario creado con éxito", MessageBoxButtons.OK, MessageBoxIcon.Question)
                         MaterialSingleLineTextField1.Clear()
@@ -126,6 +128,7 @@ Public Class Login
             If ex.ToString.Contains("No se pudo encontrar el directorio") Then
                 MetroMessageBox.Show(Me, "Puedes crear nuevos usuarios", "Ya no hay ningun usuario", MessageBoxButtons.OK, MessageBoxIcon.Question)
                 MetroTabControl1.SelectedIndex = 1
+                MaterialSingleLineTextField1.Select()
             ElseIf ex.ToString.Contains("El directorio no está v") Then
                 MetroMessageBox.Show(Me, "Intentalo de nuevo", "Cerrando archivos...", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
@@ -148,8 +151,12 @@ Public Class Login
     End Sub
     '=================================Salir============================================
     Private Sub MetroTabControl1_Click(sender As Object, e As EventArgs) Handles MetroTabControl1.Click
-        If MetroTabControl1.SelectedIndex = 4 Then
+        If MetroTabControl1.SelectedIndex = 5 Then
             End
         End If
+    End Sub
+
+    Private Sub MaterialRaisedButton3_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
+
     End Sub
 End Class

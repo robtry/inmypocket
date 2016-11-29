@@ -53,13 +53,12 @@ Partial Class Form1
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.MetroProgressBar1 = New MetroFramework.Controls.MetroProgressBar()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.MetroProgressSpinner1 = New MetroFramework.Controls.MetroProgressSpinner()
         Me.MaterialRaisedButton7 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -81,9 +80,11 @@ Partial Class Form1
         Me.MetroComboBox2 = New MetroFramework.Controls.MetroComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.MetroContextMenu1 = New MetroFramework.Controls.MetroContextMenu(Me.components)
+        Me.ActualizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,8 +98,9 @@ Partial Class Form1
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MetroContextMenu1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -203,7 +205,7 @@ Partial Class Form1
         '
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox6.Image = Global.impoket.My.Resources.Resources.pie_chart_1
+        Me.PictureBox6.Image = Global.impoket.My.Resources.Resources.piechart1
         Me.PictureBox6.Location = New System.Drawing.Point(152, 328)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(48, 50)
@@ -215,7 +217,7 @@ Partial Class Form1
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox5.Image = Global.impoket.My.Resources.Resources.credit_card_2
+        Me.PictureBox5.Image = Global.impoket.My.Resources.Resources.creditcard2
         Me.PictureBox5.Location = New System.Drawing.Point(152, 258)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(48, 50)
@@ -227,7 +229,7 @@ Partial Class Form1
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox4.Image = Global.impoket.My.Resources.Resources.piggy_bank
+        Me.PictureBox4.Image = Global.impoket.My.Resources.Resources.piggybank
         Me.PictureBox4.Location = New System.Drawing.Point(152, 185)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(48, 50)
@@ -239,7 +241,7 @@ Partial Class Form1
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Image = Global.impoket.My.Resources.Resources.bag_6
+        Me.PictureBox3.Image = Global.impoket.My.Resources.Resources.bag6
         Me.PictureBox3.Location = New System.Drawing.Point(152, 117)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(48, 50)
@@ -251,7 +253,7 @@ Partial Class Form1
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.impoket.My.Resources.Resources.bag_5
+        Me.PictureBox2.Image = Global.impoket.My.Resources.Resources.bag5
         Me.PictureBox2.Location = New System.Drawing.Point(153, 49)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(48, 50)
@@ -349,7 +351,7 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(440, 387)
+        Me.Label1.Location = New System.Drawing.Point(420, 388)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(155, 22)
         Me.Label1.TabIndex = 1
@@ -394,7 +396,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(809, 387)
+        Me.Label4.Location = New System.Drawing.Point(858, 392)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(189, 17)
         Me.Label4.TabIndex = 5
@@ -409,7 +411,7 @@ Partial Class Form1
         Me.Chart1.Location = New System.Drawing.Point(652, 84)
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
         Series1.IsValueShownAsLabel = True
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
@@ -427,7 +429,7 @@ Partial Class Form1
         Me.Chart2.Location = New System.Drawing.Point(948, 84)
         Me.Chart2.Name = "Chart2"
         Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
         Series2.IsValueShownAsLabel = True
         Series2.Legend = "Legend1"
         Series2.Name = "Series1"
@@ -438,9 +440,11 @@ Partial Class Form1
         '
         'MetroProgressBar1
         '
-        Me.MetroProgressBar1.Location = New System.Drawing.Point(802, 424)
+        Me.MetroProgressBar1.Location = New System.Drawing.Point(817, 429)
         Me.MetroProgressBar1.Name = "MetroProgressBar1"
-        Me.MetroProgressBar1.Size = New System.Drawing.Size(196, 23)
+        Me.MetroProgressBar1.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.MetroProgressBar1.Size = New System.Drawing.Size(284, 23)
+        Me.MetroProgressBar1.Step = 1
         Me.MetroProgressBar1.TabIndex = 9
         '
         'Label5
@@ -454,26 +458,6 @@ Partial Class Form1
         Me.Label5.Size = New System.Drawing.Size(124, 24)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Mes: xxxxx"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Location = New System.Drawing.Point(777, 454)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 18)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Label6"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Location = New System.Drawing.Point(987, 451)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 18)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Label7"
         '
         'Label8
         '
@@ -517,6 +501,7 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel2.Controls.Add(Me.MetroProgressSpinner1)
         Me.Panel2.Controls.Add(Me.MaterialRaisedButton7)
         Me.Panel2.Controls.Add(Me.MaterialRaisedButton2)
         Me.Panel2.Controls.Add(Me.MaterialRaisedButton1)
@@ -528,8 +513,6 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.MaterialSingleLineTextField1)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.MetroProgressBar1)
         Me.Panel2.Controls.Add(Me.MaterialFlatButton7)
         Me.Panel2.Controls.Add(Me.Chart2)
@@ -546,6 +529,19 @@ Partial Class Form1
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1250, 486)
         Me.Panel2.TabIndex = 18
+        '
+        'MetroProgressSpinner1
+        '
+        Me.MetroProgressSpinner1.BackColor = System.Drawing.SystemColors.Window
+        Me.MetroProgressSpinner1.Location = New System.Drawing.Point(424, 72)
+        Me.MetroProgressSpinner1.Maximum = 100
+        Me.MetroProgressSpinner1.Name = "MetroProgressSpinner1"
+        Me.MetroProgressSpinner1.Size = New System.Drawing.Size(67, 66)
+        Me.MetroProgressSpinner1.Speed = 2.0!
+        Me.MetroProgressSpinner1.TabIndex = 44
+        Me.MetroProgressSpinner1.UseCustomBackColor = True
+        Me.MetroProgressSpinner1.UseSelectable = True
+        Me.MetroProgressSpinner1.Value = 15
         '
         'MaterialRaisedButton7
         '
@@ -670,7 +666,7 @@ Partial Class Form1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.impoket.My.Resources.Resources.duda
-        Me.PictureBox1.Location = New System.Drawing.Point(422, 156)
+        Me.PictureBox1.Location = New System.Drawing.Point(413, 170)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -787,10 +783,16 @@ Partial Class Form1
         '
         Me.Timer2.Interval = 1
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.BlinkRate = 90
+        Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'PictureBox7
         '
         Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox7.Image = Global.impoket.My.Resources.Resources.wallet_11
+        Me.PictureBox7.Image = Global.impoket.My.Resources.Resources.wallet11
         Me.PictureBox7.Location = New System.Drawing.Point(4, 21)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(51, 41)
@@ -798,11 +800,17 @@ Partial Class Form1
         Me.PictureBox7.TabIndex = 15
         Me.PictureBox7.TabStop = False
         '
-        'ErrorProvider1
+        'MetroContextMenu1
         '
-        Me.ErrorProvider1.BlinkRate = 90
-        Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink
-        Me.ErrorProvider1.ContainerControl = Me
+        Me.MetroContextMenu1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ActualizarToolStripMenuItem})
+        Me.MetroContextMenu1.Name = "MetroContextMenu1"
+        Me.MetroContextMenu1.Size = New System.Drawing.Size(127, 26)
+        '
+        'ActualizarToolStripMenuItem
+        '
+        Me.ActualizarToolStripMenuItem.Name = "ActualizarToolStripMenuItem"
+        Me.ActualizarToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.ActualizarToolStripMenuItem.Text = "Actualizar"
         '
         'Form1
         '
@@ -810,6 +818,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(900, 550)
+        Me.ContextMenuStrip = Me.MetroContextMenu1
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.Label8)
@@ -838,8 +847,9 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MetroContextMenu1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -857,8 +867,6 @@ Partial Class Form1
     Friend WithEvents Chart2 As DataVisualization.Charting.Chart
     Friend WithEvents MetroProgressBar1 As MetroFramework.Controls.MetroProgressBar
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents MaterialFlatButton7 As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialFlatButton6 As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialFlatButton5 As MaterialSkin.Controls.MaterialFlatButton
@@ -901,4 +909,7 @@ Partial Class Form1
     Friend WithEvents MaterialRaisedButton8 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents MetroContextMenu1 As MetroFramework.Controls.MetroContextMenu
+    Friend WithEvents ActualizarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MetroProgressSpinner1 As MetroFramework.Controls.MetroProgressSpinner
 End Class
