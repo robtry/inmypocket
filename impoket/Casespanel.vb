@@ -36,6 +36,7 @@ Module Casespanel
             Form1.Label16.Text = "Ingreso"
             Form1.Text = "           In My Pocket Ingresos"
             Form1.Label13.Text = "Tipo de Ingreso"
+            Form1.Label12.Text = "Asociar a Tarjeta"
             Form1.Label14.Text = "Descripción"
             Form1.Label15.Text = "$" & dinero
             Form1.MaterialSingleLineTextField1.Hint = "Breve descripción del ingreso <op>"
@@ -122,9 +123,10 @@ Module Casespanel
             Form1.Label16.Text = "Gastos"
             Form1.Text = "           In My Pocket Gastos"
             Form1.Label13.Text = "Tipo de Gastos"
+            Form1.Label12.Text = "Asociar a Tarjeta"
             Form1.Label14.Text = "Descripción"
             Form1.Label15.Text = "$" & dinero
-            Form1.MaterialSingleLineTextField1.Hint = "Breve descripción del gasto"
+            Form1.MaterialSingleLineTextField1.Hint = "Breve descripción del gasto <op>"
             Form1.Label11.Text = DateTime.Now
             Form1.Panel3.BackColor = ColorTranslator.FromHtml("#E64A19")
             Form1.MetroComboBox1.Style = MetroFramework.MetroColorStyle.Orange
@@ -136,6 +138,7 @@ Module Casespanel
             Form1.Refresh()
             whereiam = 2
             actualizatipogastos()
+            leertarjetas()
         Catch ex As Exception
             If ex.ToString.Contains("La conversión de la cadena") Then 'si puchas cancelar
                 If Form1.Panel2.Location.X = 54 Then 'si se ve animalo
@@ -206,7 +209,6 @@ Module Casespanel
         Form1.Text = "           In My Pocket Presupuesto"
         Form1.Label14.Text = "Nuevo"
         Form1.Label16.Text = "Presupuesto"
-        Form1.Label15.Text = "Presupuesto actual: " ' cambir en el limpuiartodo()
         Form1.Label13.Text = DateTime.Now
         Form1.MaterialSingleLineTextField1.Hint = "123456"
         Form1.Panel3.BackColor = ColorTranslator.FromHtml("#E91E63")
@@ -215,15 +217,7 @@ Module Casespanel
         Form1.SkinManager.ColorScheme = New ColorScheme(Primary.Pink700, Primary.Pink900, Primary.BlueGrey900, Accent.Indigo700, TextShade.WHITE)
         Form1.Refresh()
         whereiam = 3
-        actualizapresupuesto()
-    End Sub
-    Public Sub actualizapresupuesto()
-        'read en acces
-    End Sub
-    Public Sub cambiapresupuesto()
-        If IsNumeric(Form1.MaterialSingleLineTextField1.Text) Then
-            'update en accews
-        End If
+        leerpresupusto()
     End Sub
     '===============================================tarjetas=========================================================================
     Public Sub tarjetacase()
@@ -235,7 +229,7 @@ Module Casespanel
         Form1.Label13.Text = "Tipo de Tarjeta"
         Form1.MaterialRaisedButton7.Text = "Editar"
         Form1.Label11.Text = DateTime.Now
-        Form1.Label15.Text = "$"
+        Form1.Label15.Text = ""
         Form1.Label12.Text = ""
         Form1.MaterialSingleLineTextField1.Hint = "Breve descripción de la tarjeta"
         Form1.Panel3.BackColor = ColorTranslator.FromHtml("#5E35B1")
@@ -246,6 +240,7 @@ Module Casespanel
         Form1.Refresh()
         whereiam = 4
         actualizatipostarjetas()
+        Form1.MaterialSingleLineTextField1.Select()
     End Sub
     Public Sub actualizatipostarjetas()
         Form1.MetroComboBox1.Items.Clear()
@@ -305,5 +300,7 @@ Module Casespanel
         Form1.MetroComboBox1.SelectedIndex = -1
         Form1.MetroComboBox2.SelectedIndex = -1
         Form1.ErrorProvider1.SetError(Form1.MetroComboBox1, Nothing)
+        Form1.ErrorProvider1.SetError(Form1.MaterialSingleLineTextField1, Nothing)
+        Form1.ErrorProvider1.SetError(Form1.Label15, Nothing)
     End Sub
 End Module

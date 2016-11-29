@@ -115,9 +115,32 @@ Public Class Form1
         Select Case whereiam
             Case 1
                 agregaingresos()
+            Case 2
+                agregagastos()
             Case 4
+                If Label15.Text = "$" Then
+                    Label11.Text = DateTime.Now
+                End If
                 agregatarjetas()
         End Select
+    End Sub
+    '=============================================El enter=========================================================
+    Private Sub MaterialSingleLineTextField1_KeyDown(sender As Object, e As KeyEventArgs) Handles MaterialSingleLineTextField1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Select Case whereiam
+                Case 1
+                    agregaingresos()
+                Case 2
+                    agregagastos()
+                Case 3
+                    cambiapresupuesto() 'update en la bd
+                Case 4
+                    If Label15.Text = "$" Then
+                        Label11.Text = DateTime.Now
+                    End If
+                    agregatarjetas()
+            End Select
+        End If
     End Sub
     '====================================Nuevo====================================================================
     Private Sub MaterialRaisedButton5_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton5.Click
@@ -142,6 +165,6 @@ Public Class Form1
         Me.ErrorProvider1.SetError(MetroComboBox1, Nothing)
     End Sub
     Private Sub MaterialSingleLineTextField1_Click(sender As Object, e As EventArgs) Handles MaterialSingleLineTextField1.Click
-        Me.ErrorProvider1.SetError(Label15, Nothing)
+        Me.ErrorProvider1.SetError(MaterialSingleLineTextField1, Nothing)
     End Sub
 End Class

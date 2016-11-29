@@ -103,7 +103,7 @@ Module Module1database
                 sql = "INSERT INTO INGRESOS(CANTIDAD, DESCRIPCION, TIPO, ASOCIADO, AGREGADO) "
                 sql += "VALUES('" & howmanymony & "','" & descripcion & "','" & tipo & "','" & tarjetaasociada & "','" & fechaexacta & "')"
                 'sql += "'" & tipo & "')"
-                MsgBox(sql)
+                ' MsgBox(sql)
                 cmd.CommandText = sql
                 Try
                     'insertar
@@ -126,24 +126,24 @@ Module Module1database
             Form1.ErrorProvider1.SetError(Form1.Label15, "Da clic a nuevo")
         End If
     End Sub
-    '=================================================Tarjetas========================================================
-    Public Sub agregatarjetas()
-        Dim identificacion As String
-        Dim descripcion As String = ""
-        Dim tipo As String
-        identificacion = Form1.Label11.Text.ToString
+    '===============================================Gastos============================================================
+    Public Sub agregagastos()
+        'Dim identificacion As String
+        Dim descripcion, fechaexacta, tarjetaasociada, howmanymony, tipo As String
+        fechaexacta = Form1.Label11.Text.ToString
         descripcion = Form1.MaterialSingleLineTextField1.Text
+        tarjetaasociada = Form1.MetroComboBox2.Text
+        howmanymony = Form1.Label15.Text
         tipo = Form1.MetroComboBox1.Text
-        If tipo <> "" Then
-            Form1.ErrorProvider1.SetError(Form1.MetroComboBox1, Nothing)
-            If descripcion <> "" Then
-                Form1.ErrorProvider1.SetError(Form1.MaterialSingleLineTextField1, Nothing)
+        If howmanymony <> "$" Then
+            If tipo <> "" Then
+                Form1.ErrorProvider1.SetError(Form1.MetroComboBox1, Nothing)
                 cmd.CommandType = CommandType.Text
                 cmd.Connection = conn
-                sql = "INSERT INTO TARJETAS(ID, DESCRIPCION, TIPO) "
-                sql += "VALUES('" & identificacion & "','" & descripcion & "',"
-                sql += "'" & tipo & "')"
-                MsgBox(sql)
+                sql = "INSERT INTO GASTOS(CANTIDAD, DESCRIPCION, TIPO, ASOCIADO, AGREGADO) "
+                sql += "VALUES('" & howmanymony & "','" & descripcion & "','" & tipo & "','" & tarjetaasociada & "','" & fechaexacta & "')"
+                'sql += "'" & tipo & "')"
+                ' MsgBox(sql)
                 cmd.CommandText = sql
                 Try
                     'insertar
@@ -160,10 +160,93 @@ Module Module1database
                     End If
                 End Try
             Else
-                Form1.ErrorProvider1.SetError(Form1.MaterialSingleLineTextField1, "Llena el campo")
+                Form1.ErrorProvider1.SetError(Form1.MetroComboBox1, "Debes elegir un tipo")
             End If
         Else
-            Form1.ErrorProvider1.SetError(Form1.MetroComboBox1, "Llena el campo")
+            Form1.ErrorProvider1.SetError(Form1.Label15, "Da clic a nuevo")
+        End If
+    End Sub
+    '==================================================Presupuesto===================================================
+    Public Sub cambiapresupuesto()
+        If IsNumeric(Form1.MaterialSingleLineTextField1.Text) Then
+            'update en accews
+            cmd.Connection = conn
+            cmd.CommandType = CommandType.Text
+            sql = "UPDATE PRESUPUESTOS SET PRESUPUESTO ='" & Form1.MaterialSingleLineTextField1.Text & "',MODIFICADO = '" & Form1.Label13.Text.ToString & "' WHERE ID = 1 "
+            ' MsgBox(sql)
+            cmd.CommandText = sql
+            Try
+                'insertar
+                cmd.ExecuteNonQuery()
+                MsgBox("Insertado correctamente")
+                limpiartodo()
+                dr.Close()
+                leerpresupusto()
+            Catch ex As Exception
+                If ex.ToString.Contains("No coinciden los tipos de datos en la expresi") Then
+                    ingtresocase()
+                Else
+                    MsgBox(ex.Message)
+                End If
+            End Try
+        Else
+        Form1.ErrorProvider1.SetError(Form1.MaterialSingleLineTextField1, "Solo Números")
+        End If
+    End Sub
+    Public Sub leerpresupusto()
+        cmd.Connection = conn
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "Select PRESUPUESTO FROM PRESUPUESTOS "
+        Try
+            dr = cmd.ExecuteReader()
+            'recorrido del dr
+            If dr.HasRows Then
+                While dr.Read()
+                    Form1.Label15.Text = "Presupuesto actual: " & dr(0)
+                End While
+            Else
+                Form1.Label15.Text = "Presupuesto actual: ---"
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+    '=================================================Tarjetas========================================================
+    Public Sub agregatarjetas()
+        Dim tipo, descripcion, fechaexacta As String
+        descripcion = Form1.MaterialSingleLineTextField1.Text
+        fechaexacta = Form1.Label11.Text.ToString
+        tipo = Form1.MetroComboBox1.Text
+        If descripcion <> "" Then
+            Form1.ErrorProvider1.SetError(Form1.MetroComboBox1, Nothing)
+            If tipo <> "" Then
+                Form1.ErrorProvider1.SetError(Form1.MaterialSingleLineTextField1, Nothing)
+                cmd.CommandType = CommandType.Text
+                cmd.Connection = conn
+                sql = "INSERT INTO TARJETAS(DESCRIPCION, TIPO, AGREGADO) "
+                sql += "VALUES('" & descripcion & "','" & tipo & "','" & fechaexacta & "')"
+                ' MsgBox(sql)
+                cmd.CommandText = sql
+                Try
+                    'insertar
+                    cmd.ExecuteNonQuery()
+                    MsgBox("Insertado correctamente")
+                    limpiartodo()
+                Catch ex As Exception
+                    If ex.ToString.Contains("No coinciden los tipos de datos en la expresi") Then
+                        ingtresocase()
+                    ElseIf ex.ToString.Contains("valores duplicados") Then
+                        MsgBox("ya esta el regtistro")
+                    Else
+                        MsgBox(ex.Message)
+                    End If
+                End Try
+            Else
+                Form1.ErrorProvider1.SetError(Form1.MetroComboBox1, "Debes elegir el tipo")
+            End If
+        Else
+            Form1.ErrorProvider1.SetError(Form1.MaterialSingleLineTextField1, "Debes agregar una descripción")
         End If
     End Sub
     Public Sub leertarjetas()
@@ -179,49 +262,15 @@ Module Module1database
                     'MsgBox(dr(0).ToString)
                     Form1.MetroComboBox2.Items.Add(dr(0).ToString)
                 End While
-            Else
-                MsgBox("No hay tarjetas")
+                'Else
+                'MsgBox("No hay tarjetas")
             End If
             dr.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
-    Public Sub consultar(ByRef idetificacion As String)
-        cmd.Connection = conn
-        cmd.CommandType = CommandType.Text
-        'verificra si trae dato, si no consulta todo
-        If idetificacion <> "" Then
-            cmd.CommandText = "SELECT NOMBRES, APELLIDOS, CORREO, DIRECCION FROM PERSONA WHERE IDPERSONA=" + idetificacion
-        Else
-            cmd.CommandText = "SELECT NOMBRES, APELLIDOS, CORREO, DIRECCION FROM PERSONA "
-        End If
-        Try
-            dr = cmd.ExecuteReader()
-            'recorrido del dr
-            If dr.HasRows Then
-                While dr.Read()
-                    MsgBox(dr(0).ToString + "" + dr(1).ToString + "" + dr(2).ToString + "" + dr(3).ToString)
-                End While
-            Else
-                MsgBox("no exixten registros para la consulta")
-            End If
-            dr.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-    Public Sub verficaractualizar(ByRef idetificacion As String)
-        cmd.Connection = conn
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT NOMBRES, APELLIDOS, CORREO, DIRECCION FROM PERSONA WHERE IDPERSONA=" + idetificacion
-        Try
-            dr = cmd.ExecuteReader()
-            'debe cerrarse, pero ese se ace desde alla
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
+    '========================================================Login======================================================
     Public Sub usuariosiniciar()
         Login.MetroComboBox1.Items.Clear()
         Try
