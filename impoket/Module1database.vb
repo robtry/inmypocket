@@ -12,6 +12,16 @@ Module Module1database
     Public Sub ConnectToAccess()
         Dim userubication As String = Login.MetroComboBox1.Text
         usertoconect = userubication
+        Dim boy1 As String
+        Try
+            Dim avatar As StreamReader = File.OpenText(CurDir() + "\basededatos\users\" + usertoconect + "\avatar.dll")
+            boy1 = avatar.ReadToEnd
+            Form1.PictureBox10.Image = My.Resources.boy1
+            FileClose()
+            avatar.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
         ' TODO: Modify the connection string and include any
         ' additional required properties for your database.
         'conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=" & CurDir() + "\basededatos\users\asq\noviembre2016.accdb"

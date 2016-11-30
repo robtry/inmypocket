@@ -13,44 +13,18 @@ Public Class Login
         End If
     End Sub
     '========================================Iniciar==================================================
-    Private Sub MetroComboBox1_Click(sender As Object, e As EventArgs)
-        usuariosiniciar()
-    End Sub
-    Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs)
+    Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         If Not MetroComboBox1.Text = "" Then
             ConnectToAccessTry()
         End If
     End Sub
-    '==================================Crear Usuario===================================================
-    Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs)
-        If Not MaterialSingleLineTextField1.Text = "" Then
-            If Not System.IO.Directory.Exists(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text) Then
-                Try
-                    System.IO.Directory.CreateDirectory(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text)
-                    System.IO.File.Copy(CurDir() + "\basededatos\Limpia.accdb", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\plantilla.accdb", True)
-                    System.IO.File.Copy(CurDir() + "\basededatos\tiposdeingresos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdeingreso.txt", True)
-                    System.IO.File.Copy(CurDir() + "\basededatos\tiposdegastos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdegasto.txt", True)
-                    System.IO.File.Copy(CurDir() + "\basededatos\tiposdetarjetas.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdetarjeta.txt", True)
-                    System.IO.File.Copy(CurDir() + "\basededatos\avatar.dll", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\avatar.dll", True)
-                    My.Computer.FileSystem.WriteAllText(CurDir() + "\basededatos\users.txt", MaterialSingleLineTextField1.Text & vbCrLf, True)
-                    MetroMessageBox.Show(Me, "", "Usuario creado con éxito", MessageBoxButtons.OK, MessageBoxIcon.Question)
-                    MaterialSingleLineTextField1.Clear()
-                Catch ex As Exception
-                    If ex.ToString.Contains("Caracteres no válidos") Then
-                        MetroMessageBox.Show(Me, "El nombre de usuario no puede contener caracteres especiales", "Error al crear usuario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
-                    Else
-                        MsgBox(ex.Message)
-                        MetroMessageBox.Show(Me, "Intentalo de nuevo", "Error al crear el usuario", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-                    End If
-                End Try
-            Else
-                MetroMessageBox.Show(Me, "Elije otro nombre", "¡El usuario '" & MaterialSingleLineTextField1.Text & "' ya existe!", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        End If
+    Private Sub MetroComboBox1_Click(sender As Object, e As EventArgs) Handles MetroComboBox1.Click
+        usuariosiniciar()
     End Sub
-    Private Sub MaterialSingleLineTextField1_KeyDown(sender As Object, e As KeyEventArgs)
-        If e.KeyCode = Keys.Enter Then
-            If Not MaterialSingleLineTextField1.Text = "" Then
+    '==================================Crear Usuario===================================================
+    Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
+        If Not MaterialSingleLineTextField1.Text = "" Then
+            If TextBox1.Text <> "" Then
                 If Not System.IO.Directory.Exists(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text) Then
                     Try
                         System.IO.Directory.CreateDirectory(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text)
@@ -60,8 +34,10 @@ Public Class Login
                         System.IO.File.Copy(CurDir() + "\basededatos\tiposdetarjetas.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdetarjeta.txt", True)
                         System.IO.File.Copy(CurDir() + "\basededatos\avatar.dll", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\avatar.dll", True)
                         My.Computer.FileSystem.WriteAllText(CurDir() + "\basededatos\users.txt", MaterialSingleLineTextField1.Text & vbCrLf, True)
+                        My.Computer.FileSystem.WriteAllText(CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\avatar.dll", TextBox1.Text, True)
                         MetroMessageBox.Show(Me, "", "Usuario creado con éxito", MessageBoxButtons.OK, MessageBoxIcon.Question)
                         MaterialSingleLineTextField1.Clear()
+                        TextBox1.Clear()
                     Catch ex As Exception
                         If ex.ToString.Contains("Caracteres no válidos") Then
                             MetroMessageBox.Show(Me, "El nombre de usuario no puede contener caracteres especiales", "Error al crear usuario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
@@ -72,6 +48,49 @@ Public Class Login
                     End Try
                 Else
                     MetroMessageBox.Show(Me, "Elije otro nombre", "¡El usuario '" & MaterialSingleLineTextField1.Text & "' ya existe!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Else
+                Avatars.Show()
+                Me.Hide()
+            End If
+        End If
+    End Sub
+    Private Sub MaterialRaisedButton6_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton6.Click
+        Avatars.Show()
+        Me.Hide()
+    End Sub
+    Private Sub MaterialSingleLineTextField1_KeyDown(sender As Object, e As KeyEventArgs) Handles MaterialSingleLineTextField1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+
+            If Not MaterialSingleLineTextField1.Text = "" Then
+                If TextBox1.Text <> "" Then
+                    If Not System.IO.Directory.Exists(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text) Then
+                        Try
+                            System.IO.Directory.CreateDirectory(CurDir() & "\basededatos\users\" & MaterialSingleLineTextField1.Text)
+                            System.IO.File.Copy(CurDir() + "\basededatos\Limpia.accdb", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\plantilla.accdb", True)
+                            System.IO.File.Copy(CurDir() + "\basededatos\tiposdeingresos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdeingreso.txt", True)
+                            System.IO.File.Copy(CurDir() + "\basededatos\tiposdegastos.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdegasto.txt", True)
+                            System.IO.File.Copy(CurDir() + "\basededatos\tiposdetarjetas.txt", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\tiposdetarjeta.txt", True)
+                            System.IO.File.Copy(CurDir() + "\basededatos\avatar.dll", CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\avatar.dll", True)
+                            My.Computer.FileSystem.WriteAllText(CurDir() + "\basededatos\users.txt", MaterialSingleLineTextField1.Text & vbCrLf, True)
+                            My.Computer.FileSystem.WriteAllText(CurDir() + "\basededatos\users\" + MaterialSingleLineTextField1.Text + "\avatar.dll", TextBox1.Text, True)
+                            MetroMessageBox.Show(Me, "", "Usuario creado con éxito", MessageBoxButtons.OK, MessageBoxIcon.Question)
+                            MaterialSingleLineTextField1.Clear()
+                            TextBox1.Clear()
+                        Catch ex As Exception
+                            If ex.ToString.Contains("Caracteres no válidos") Then
+                                MetroMessageBox.Show(Me, "El nombre de usuario no puede contener caracteres especiales", "Error al crear usuario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+                            Else
+                                MsgBox(ex.Message)
+                                MetroMessageBox.Show(Me, "Intentalo de nuevo", "Error al crear el usuario", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+                            End If
+                        End Try
+                    Else
+                        MetroMessageBox.Show(Me, "Elije otro nombre", "¡El usuario '" & MaterialSingleLineTextField1.Text & "' ya existe!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Else
+                    Avatars.Show()
+                    Me.Hide()
                 End If
             End If
         End If
@@ -153,9 +172,5 @@ Public Class Login
         If MetroTabControl1.SelectedIndex = 5 Then
             End
         End If
-    End Sub
-
-    Private Sub MaterialRaisedButton3_Click_1(sender As Object, e As EventArgs)
-
     End Sub
 End Class

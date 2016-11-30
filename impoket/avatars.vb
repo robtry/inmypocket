@@ -1,62 +1,89 @@
 ﻿Public Class Avatars
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
+        Login.TextBox1.Text = "boy3"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
+        Login.TextBox1.Text = "girl3"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-
+        Login.TextBox1.Text = "boy4"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-
+        Login.TextBox1.Text = "girl5"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-
+        Login.TextBox1.Text = "boy5"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-
+        Login.TextBox1.Text = "girl4"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
-
+        Login.TextBox1.Text = "girl"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
-
+        Login.TextBox1.Text = "boy1"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
-
+        Login.TextBox1.Text = "boy"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
-
+        Login.TextBox1.Text = "girl2"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
-
+        Login.TextBox1.Text = "girl1"
+        Login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
-
+        Login.TextBox1.Text = "boy2"
+        Login.Show()
+        Me.Hide()
     End Sub
-
     Private Sub PictureBox14_Click(sender As Object, e As EventArgs) Handles PictureBox14.Click
-
+        Login.TextBox1.Text = "girl6"
+        Login.Show()
+        Me.Hide()
     End Sub
-
     Private Sub PictureBox15_Click(sender As Object, e As EventArgs) Handles PictureBox15.Click
-
+        Login.TextBox1.Text = "man"
+        Login.Show()
+        Me.Hide()
     End Sub
-
     Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
-
+        Login.TextBox1.Text = "girl7"
+        Login.Show()
+        Me.Hide()
     End Sub
     '==================================leave======================================================
     Private Sub PictureBox1_MouseLeave(sender As Object, e As EventArgs) Handles PictureBox1.MouseLeave
