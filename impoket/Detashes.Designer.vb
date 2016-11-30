@@ -86,10 +86,11 @@ Partial Class Detashes
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(609, 326)
+        Me.ListBox1.Location = New System.Drawing.Point(609, 324)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(70, 134)
         Me.ListBox1.TabIndex = 40
+        Me.ListBox1.Visible = False
         '
         'Detashes
         '

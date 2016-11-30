@@ -172,15 +172,8 @@ Public Class Form1
     '===============================Ver todo====================================================================
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
         Detashes.Close()
-        Select Case whereiam
-            Case 1
-                Detashes.Show()
-                Me.Hide()
-            Case 2
-
-            Case 4
-
-        End Select
+        Detashes.Show()
+        Me.Hide()
     End Sub
     '======================================Salir==========================================================================
     Private Sub MaterialRaisedButton8_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton8.Click
