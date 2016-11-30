@@ -128,7 +128,6 @@ Public Class Login
             If ex.ToString.Contains("No se pudo encontrar el directorio") Then
                 MetroMessageBox.Show(Me, "Puedes crear nuevos usuarios", "Ya no hay ningun usuario", MessageBoxButtons.OK, MessageBoxIcon.Question)
                 MetroTabControl1.SelectedIndex = 1
-                MaterialSingleLineTextField1.Select()
             ElseIf ex.ToString.Contains("El directorio no está v") Then
                 MetroMessageBox.Show(Me, "Intentalo de nuevo", "Cerrando archivos...", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
@@ -156,7 +155,7 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub MaterialRaisedButton3_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
+    Private Sub MaterialRaisedButton3_Click_1(sender As Object, e As EventArgs)
 
     End Sub
 End Class

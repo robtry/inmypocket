@@ -40,7 +40,6 @@ Partial Class Login
         Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
         Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
-        Me.MaterialSingleLineTextField2 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialRaisedButton6 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton3 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -216,7 +215,7 @@ Partial Class Login
         'MaterialRaisedButton2
         '
         Me.MaterialRaisedButton2.Depth = 0
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(128, 251)
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(127, 254)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
         Me.MaterialRaisedButton2.Primary = True
@@ -239,7 +238,7 @@ Partial Class Login
         '
         Me.MetroComboBox2.FormattingEnabled = True
         Me.MetroComboBox2.ItemHeight = 23
-        Me.MetroComboBox2.Location = New System.Drawing.Point(58, 152)
+        Me.MetroComboBox2.Location = New System.Drawing.Point(57, 155)
         Me.MetroComboBox2.Name = "MetroComboBox2"
         Me.MetroComboBox2.Size = New System.Drawing.Size(324, 29)
         Me.MetroComboBox2.Style = MetroFramework.MetroColorStyle.Green
@@ -248,11 +247,9 @@ Partial Class Login
         '
         'MetroTabPage1
         '
-        Me.MetroTabPage1.Controls.Add(Me.MaterialSingleLineTextField2)
-        Me.MetroTabPage1.Controls.Add(Me.MaterialRaisedButton6)
-        Me.MetroTabPage1.Controls.Add(Me.MaterialRaisedButton3)
-        Me.MetroTabPage1.Controls.Add(Me.Label2)
-        Me.MetroTabPage1.Controls.Add(Me.MaterialSingleLineTextField1)
+        Me.MetroTabPage1.Controls.Add(Me.MaterialRaisedButton1)
+        Me.MetroTabPage1.Controls.Add(Me.Label3)
+        Me.MetroTabPage1.Controls.Add(Me.MetroComboBox1)
         Me.MetroTabPage1.HorizontalScrollbarBarColor = True
         Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
         Me.MetroTabPage1.HorizontalScrollbarSize = 0
@@ -260,16 +257,17 @@ Partial Class Login
         Me.MetroTabPage1.Name = "MetroTabPage1"
         Me.MetroTabPage1.Size = New System.Drawing.Size(442, 415)
         Me.MetroTabPage1.TabIndex = 0
-        Me.MetroTabPage1.Text = "Crear Usuario"
+        Me.MetroTabPage1.Text = "Iniciar."
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
         Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage1.VerticalScrollbarSize = 0
         '
         'MetroTabPage2
         '
-        Me.MetroTabPage2.Controls.Add(Me.MaterialRaisedButton1)
-        Me.MetroTabPage2.Controls.Add(Me.Label3)
-        Me.MetroTabPage2.Controls.Add(Me.MetroComboBox1)
+        Me.MetroTabPage2.Controls.Add(Me.MaterialRaisedButton6)
+        Me.MetroTabPage2.Controls.Add(Me.MaterialRaisedButton3)
+        Me.MetroTabPage2.Controls.Add(Me.Label2)
+        Me.MetroTabPage2.Controls.Add(Me.MaterialSingleLineTextField1)
         Me.MetroTabPage2.HorizontalScrollbarBarColor = True
         Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
         Me.MetroTabPage2.HorizontalScrollbarSize = 0
@@ -277,67 +275,48 @@ Partial Class Login
         Me.MetroTabPage2.Name = "MetroTabPage2"
         Me.MetroTabPage2.Size = New System.Drawing.Size(442, 415)
         Me.MetroTabPage2.TabIndex = 1
-        Me.MetroTabPage2.Text = "Iniciar"
+        Me.MetroTabPage2.Text = "Crear Usuario"
         Me.MetroTabPage2.VerticalScrollbarBarColor = True
         Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
         Me.MetroTabPage2.VerticalScrollbarSize = 0
         '
         'MetroTabControl1
         '
-        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
+        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage3)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage4)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage5)
         Me.MetroTabControl1.Controls.Add(Me.MetroTabPage6)
         Me.MetroTabControl1.Location = New System.Drawing.Point(3, 65)
         Me.MetroTabControl1.Name = "MetroTabControl1"
-        Me.MetroTabControl1.SelectedIndex = 1
+        Me.MetroTabControl1.SelectedIndex = 0
         Me.MetroTabControl1.Size = New System.Drawing.Size(450, 457)
         Me.MetroTabControl1.Style = MetroFramework.MetroColorStyle.Green
         Me.MetroTabControl1.TabIndex = 0
         Me.MetroTabControl1.UseSelectable = True
         '
-        'MaterialSingleLineTextField2
-        '
-        Me.MaterialSingleLineTextField2.Depth = 0
-        Me.MaterialSingleLineTextField2.Enabled = False
-        Me.MaterialSingleLineTextField2.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaterialSingleLineTextField2.Hint = "Avatar"
-        Me.MaterialSingleLineTextField2.Location = New System.Drawing.Point(58, 202)
-        Me.MaterialSingleLineTextField2.MaxLength = 32767
-        Me.MaterialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialSingleLineTextField2.Name = "MaterialSingleLineTextField2"
-        Me.MaterialSingleLineTextField2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MaterialSingleLineTextField2.SelectedText = ""
-        Me.MaterialSingleLineTextField2.SelectionLength = 0
-        Me.MaterialSingleLineTextField2.SelectionStart = 0
-        Me.MaterialSingleLineTextField2.Size = New System.Drawing.Size(306, 23)
-        Me.MaterialSingleLineTextField2.TabIndex = 26
-        Me.MaterialSingleLineTextField2.TabStop = False
-        Me.MaterialSingleLineTextField2.UseSystemPasswordChar = False
-        '
         'MaterialRaisedButton6
         '
         Me.MaterialRaisedButton6.Depth = 0
-        Me.MaterialRaisedButton6.Location = New System.Drawing.Point(370, 202)
+        Me.MaterialRaisedButton6.Location = New System.Drawing.Point(365, 204)
         Me.MaterialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton6.Name = "MaterialRaisedButton6"
         Me.MaterialRaisedButton6.Primary = True
         Me.MaterialRaisedButton6.Size = New System.Drawing.Size(43, 23)
-        Me.MaterialRaisedButton6.TabIndex = 25
+        Me.MaterialRaisedButton6.TabIndex = 29
         Me.MaterialRaisedButton6.Text = "..."
         Me.MaterialRaisedButton6.UseVisualStyleBackColor = True
         '
         'MaterialRaisedButton3
         '
         Me.MaterialRaisedButton3.Depth = 0
-        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(127, 265)
+        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(123, 277)
         Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton3.Name = "MaterialRaisedButton3"
         Me.MaterialRaisedButton3.Primary = True
         Me.MaterialRaisedButton3.Size = New System.Drawing.Size(166, 41)
-        Me.MaterialRaisedButton3.TabIndex = 24
+        Me.MaterialRaisedButton3.TabIndex = 28
         Me.MaterialRaisedButton3.Text = "Crear usuario"
         Me.MaterialRaisedButton3.UseVisualStyleBackColor = True
         '
@@ -348,7 +327,7 @@ Partial Class Login
         Me.Label2.Location = New System.Drawing.Point(40, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(216, 27)
-        Me.Label2.TabIndex = 23
+        Me.Label2.TabIndex = 27
         Me.Label2.Text = "Escribe un nombre"
         '
         'MaterialSingleLineTextField1
@@ -356,7 +335,7 @@ Partial Class Login
         Me.MaterialSingleLineTextField1.Depth = 0
         Me.MaterialSingleLineTextField1.Font = New System.Drawing.Font("Roboto", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaterialSingleLineTextField1.Hint = "Nombre"
-        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(58, 152)
+        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(57, 155)
         Me.MaterialSingleLineTextField1.MaxLength = 32767
         Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
@@ -365,19 +344,19 @@ Partial Class Login
         Me.MaterialSingleLineTextField1.SelectionLength = 0
         Me.MaterialSingleLineTextField1.SelectionStart = 0
         Me.MaterialSingleLineTextField1.Size = New System.Drawing.Size(355, 23)
-        Me.MaterialSingleLineTextField1.TabIndex = 22
+        Me.MaterialSingleLineTextField1.TabIndex = 26
         Me.MaterialSingleLineTextField1.TabStop = False
         Me.MaterialSingleLineTextField1.UseSystemPasswordChar = False
         '
         'MaterialRaisedButton1
         '
         Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(128, 251)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(127, 254)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
         Me.MaterialRaisedButton1.Size = New System.Drawing.Size(166, 41)
-        Me.MaterialRaisedButton1.TabIndex = 22
+        Me.MaterialRaisedButton1.TabIndex = 25
         Me.MaterialRaisedButton1.Text = "Comenzar"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
@@ -388,18 +367,18 @@ Partial Class Login
         Me.Label3.Location = New System.Drawing.Point(40, 54)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(388, 27)
-        Me.Label3.TabIndex = 21
+        Me.Label3.TabIndex = 24
         Me.Label3.Text = "Selecciona un usuario para iniciar: "
         '
         'MetroComboBox1
         '
         Me.MetroComboBox1.FormattingEnabled = True
         Me.MetroComboBox1.ItemHeight = 23
-        Me.MetroComboBox1.Location = New System.Drawing.Point(58, 152)
+        Me.MetroComboBox1.Location = New System.Drawing.Point(57, 155)
         Me.MetroComboBox1.Name = "MetroComboBox1"
         Me.MetroComboBox1.Size = New System.Drawing.Size(324, 29)
         Me.MetroComboBox1.Style = MetroFramework.MetroColorStyle.Green
-        Me.MetroComboBox1.TabIndex = 20
+        Me.MetroComboBox1.TabIndex = 23
         Me.MetroComboBox1.UseSelectable = True
         '
         'Login
@@ -451,12 +430,11 @@ Partial Class Login
     Friend WithEvents MetroTabPage1 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents MetroTabPage2 As MetroFramework.Controls.MetroTabPage
     Friend WithEvents MetroTabControl1 As MetroFramework.Controls.MetroTabControl
-    Friend WithEvents MaterialSingleLineTextField2 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Label3 As Label
+    Friend WithEvents MetroComboBox1 As MetroFramework.Controls.MetroComboBox
     Friend WithEvents MaterialRaisedButton6 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton3 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Label2 As Label
     Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents Label3 As Label
-    Friend WithEvents MetroComboBox1 As MetroFramework.Controls.MetroComboBox
 End Class
