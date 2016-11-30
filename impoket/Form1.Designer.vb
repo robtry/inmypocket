@@ -22,12 +22,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea10 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend10 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialRaisedButton8 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.DomainUpDown2 = New System.Windows.Forms.DomainUpDown()
@@ -52,7 +52,6 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.MetroProgressSpinner1 = New MetroFramework.Controls.MetroProgressSpinner()
         Me.MaterialRaisedButton7 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -93,6 +92,9 @@ Partial Class Form1
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.ListBox5 = New System.Windows.Forms.ListBox()
+        Me.ListBox6 = New System.Windows.Forms.ListBox()
+        Me.ListBox7 = New System.Windows.Forms.ListBox()
         Me.Panel1.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -282,6 +284,7 @@ Partial Class Form1
         Me.MaterialFlatButton7.TabIndex = 5
         Me.MaterialFlatButton7.Text = "acerca de"
         Me.MaterialFlatButton7.UseVisualStyleBackColor = False
+        Me.MaterialFlatButton7.Visible = False
         '
         'Label1
         '
@@ -341,36 +344,38 @@ Partial Class Form1
         '
         'Chart1
         '
-        ChartArea9.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea9)
-        Legend9.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend9)
+        ChartArea7.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea7)
+        Legend7.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend7)
         Me.Chart1.Location = New System.Drawing.Point(619, 49)
         Me.Chart1.Name = "Chart1"
-        Series9.ChartArea = "ChartArea1"
-        Series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
-        Series9.IsValueShownAsLabel = True
-        Series9.Legend = "Legend1"
-        Series9.Name = "ingresos"
-        Me.Chart1.Series.Add(Series9)
+        Series7.ChartArea = "ChartArea1"
+        Series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series7.IsValueShownAsLabel = True
+        Series7.IsVisibleInLegend = False
+        Series7.Legend = "Legend1"
+        Series7.Name = "ingresos"
+        Me.Chart1.Series.Add(Series7)
         Me.Chart1.Size = New System.Drawing.Size(288, 299)
         Me.Chart1.TabIndex = 7
         Me.Chart1.Text = "Chart1"
         '
         'Chart2
         '
-        ChartArea10.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea10)
-        Legend10.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend10)
+        ChartArea8.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea8)
+        Legend8.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend8)
         Me.Chart2.Location = New System.Drawing.Point(923, 49)
         Me.Chart2.Name = "Chart2"
-        Series10.ChartArea = "ChartArea1"
-        Series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series10.IsValueShownAsLabel = True
-        Series10.Legend = "Legend1"
-        Series10.Name = "gastos"
-        Me.Chart2.Series.Add(Series10)
+        Series8.ChartArea = "ChartArea1"
+        Series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
+        Series8.IsValueShownAsLabel = True
+        Series8.IsVisibleInLegend = False
+        Series8.Legend = "Legend1"
+        Series8.Name = "gastos"
+        Me.Chart2.Series.Add(Series8)
         Me.Chart2.Size = New System.Drawing.Size(315, 315)
         Me.Chart2.TabIndex = 8
         Me.Chart2.Text = "Chart2"
@@ -379,7 +384,6 @@ Partial Class Form1
         '
         Me.MetroProgressBar1.Location = New System.Drawing.Point(817, 429)
         Me.MetroProgressBar1.Name = "MetroProgressBar1"
-        Me.MetroProgressBar1.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.MetroProgressBar1.Size = New System.Drawing.Size(284, 23)
         Me.MetroProgressBar1.Step = 1
         Me.MetroProgressBar1.TabIndex = 9
@@ -438,6 +442,9 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel2.Controls.Add(Me.ListBox7)
+        Me.Panel2.Controls.Add(Me.ListBox6)
+        Me.Panel2.Controls.Add(Me.ListBox5)
         Me.Panel2.Controls.Add(Me.ListBox4)
         Me.Panel2.Controls.Add(Me.ListBox3)
         Me.Panel2.Controls.Add(Me.Label17)
@@ -446,7 +453,6 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.ListBox1)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.PictureBox10)
-        Me.Panel2.Controls.Add(Me.MetroProgressSpinner1)
         Me.Panel2.Controls.Add(Me.MaterialRaisedButton7)
         Me.Panel2.Controls.Add(Me.MaterialRaisedButton2)
         Me.Panel2.Controls.Add(Me.MaterialRaisedButton1)
@@ -474,19 +480,6 @@ Partial Class Form1
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1250, 486)
         Me.Panel2.TabIndex = 18
-        '
-        'MetroProgressSpinner1
-        '
-        Me.MetroProgressSpinner1.BackColor = System.Drawing.SystemColors.Window
-        Me.MetroProgressSpinner1.Location = New System.Drawing.Point(533, 51)
-        Me.MetroProgressSpinner1.Maximum = 100
-        Me.MetroProgressSpinner1.Name = "MetroProgressSpinner1"
-        Me.MetroProgressSpinner1.Size = New System.Drawing.Size(67, 66)
-        Me.MetroProgressSpinner1.Speed = 2.0!
-        Me.MetroProgressSpinner1.TabIndex = 44
-        Me.MetroProgressSpinner1.UseCustomBackColor = True
-        Me.MetroProgressSpinner1.UseSelectable = True
-        Me.MetroProgressSpinner1.Value = 15
         '
         'MaterialRaisedButton7
         '
@@ -834,9 +827,9 @@ Partial Class Form1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.impoket.My.Resources.Resources.duda
-        Me.PictureBox1.Location = New System.Drawing.Point(413, 170)
+        Me.PictureBox1.Location = New System.Drawing.Point(440, 219)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox1.Size = New System.Drawing.Size(160, 151)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -846,7 +839,7 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(620, 416)
+        Me.Label6.Location = New System.Drawing.Point(907, 465)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(91, 17)
         Me.Label6.TabIndex = 46
@@ -860,46 +853,51 @@ Partial Class Form1
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(85, 112)
         Me.ListBox1.TabIndex = 47
+        Me.ListBox1.Visible = False
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(1104, 291)
+        Me.Label7.Location = New System.Drawing.Point(943, 361)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(87, 17)
         Me.Label7.TabIndex = 48
         Me.Label7.Text = "gatostotales"
+        Me.Label7.Visible = False
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(644, 343)
+        Me.Label17.Location = New System.Drawing.Point(796, 353)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(111, 17)
         Me.Label17.TabIndex = 50
         Me.Label17.Text = "ingtresostotales"
+        Me.Label17.Visible = False
         '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
         Me.ListBox2.ItemHeight = 18
-        Me.ListBox2.Location = New System.Drawing.Point(647, 170)
+        Me.ListBox2.Location = New System.Drawing.Point(623, 322)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.Size = New System.Drawing.Size(117, 148)
         Me.ListBox2.TabIndex = 49
+        Me.ListBox2.Visible = False
         '
         'ListBox3
         '
         Me.ListBox3.FormattingEnabled = True
         Me.ListBox3.ItemHeight = 18
-        Me.ListBox3.Location = New System.Drawing.Point(770, 170)
+        Me.ListBox3.Location = New System.Drawing.Point(494, 324)
         Me.ListBox3.Name = "ListBox3"
         Me.ListBox3.Size = New System.Drawing.Size(106, 148)
         Me.ListBox3.TabIndex = 51
+        Me.ListBox3.Visible = False
         '
         'ListBox4
         '
@@ -909,6 +907,37 @@ Partial Class Form1
         Me.ListBox4.Name = "ListBox4"
         Me.ListBox4.Size = New System.Drawing.Size(106, 148)
         Me.ListBox4.TabIndex = 52
+        Me.ListBox4.Visible = False
+        '
+        'ListBox5
+        '
+        Me.ListBox5.FormattingEnabled = True
+        Me.ListBox5.ItemHeight = 18
+        Me.ListBox5.Location = New System.Drawing.Point(533, 19)
+        Me.ListBox5.Name = "ListBox5"
+        Me.ListBox5.Size = New System.Drawing.Size(106, 148)
+        Me.ListBox5.TabIndex = 53
+        Me.ListBox5.Visible = False
+        '
+        'ListBox6
+        '
+        Me.ListBox6.FormattingEnabled = True
+        Me.ListBox6.ItemHeight = 18
+        Me.ListBox6.Location = New System.Drawing.Point(970, 170)
+        Me.ListBox6.Name = "ListBox6"
+        Me.ListBox6.Size = New System.Drawing.Size(96, 112)
+        Me.ListBox6.TabIndex = 54
+        Me.ListBox6.Visible = False
+        '
+        'ListBox7
+        '
+        Me.ListBox7.FormattingEnabled = True
+        Me.ListBox7.ItemHeight = 18
+        Me.ListBox7.Location = New System.Drawing.Point(961, 28)
+        Me.ListBox7.Name = "ListBox7"
+        Me.ListBox7.Size = New System.Drawing.Size(96, 112)
+        Me.ListBox7.TabIndex = 55
+        Me.ListBox7.Visible = False
         '
         'Form1
         '
@@ -1010,7 +1039,6 @@ Partial Class Form1
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents MetroContextMenu1 As MetroFramework.Controls.MetroContextMenu
     Friend WithEvents ActualizarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MetroProgressSpinner1 As MetroFramework.Controls.MetroProgressSpinner
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents ListBox1 As ListBox
@@ -1019,4 +1047,7 @@ Partial Class Form1
     Friend WithEvents ListBox2 As ListBox
     Friend WithEvents ListBox3 As ListBox
     Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents ListBox5 As ListBox
+    Friend WithEvents ListBox7 As ListBox
+    Friend WithEvents ListBox6 As ListBox
 End Class

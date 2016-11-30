@@ -19,17 +19,11 @@ Public Class Form1
         SkinManager.ColorScheme = New ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Green200, Accent.Red100, TextShade.WHITE)
         ConnectToAccess()
         'leer
-        gastostotatles()
-        ingresostotales()
-        barrapresupusto()
-        graficaringresos()
+        actualizar()
     End Sub
     Private Sub ActualizarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarToolStripMenuItem.Click
         'leer
-        gastostotatles()
-        ingresostotales()
-        barrapresupusto()
-        graficaringresos()
+        actualizar()
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Label10.Text = DateTime.Now
@@ -116,10 +110,10 @@ Public Class Form1
     End Sub
     '=================================Graficar==================================================================================
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
-
+        actualizar()
     End Sub
     Private Sub MaterialFlatButton9_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton9.Click
-
+        actualizar()
     End Sub
     '=====================================Limpiar====================================================================
     Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton4.Click
@@ -130,6 +124,7 @@ Public Class Form1
         Select Case whereiam
             Case 3
                 cambiapresupuesto() 'update en la bd
+                actualizar()
             Case Else
                 Tiposde.Show()
                 Me.Hide()
@@ -140,13 +135,16 @@ Public Class Form1
         Select Case whereiam
             Case 1
                 agregaingresos()
+                actualizar()
             Case 2
                 agregagastos()
+                actualizar()
             Case 4
                 If Label15.Text = "$" Then
                     Label11.Text = DateTime.Now
                 End If
                 agregatarjetas()
+                actualizar()
         End Select
     End Sub
     '=============================================El enter=========================================================
@@ -155,15 +153,19 @@ Public Class Form1
             Select Case whereiam
                 Case 1
                     agregaingresos()
+                    actualizar()
                 Case 2
                     agregagastos()
+                    actualizar()
                 Case 3
                     cambiapresupuesto() 'update en la bd
+                    actualizar()
                 Case 4
                     If Label15.Text = "$" Then
                         Label11.Text = DateTime.Now
                     End If
                     agregatarjetas()
+                    actualizar()
             End Select
         End If
     End Sub
@@ -203,5 +205,7 @@ Public Class Form1
         Me.ErrorProvider1.SetError(MaterialSingleLineTextField1, Nothing)
     End Sub
 
-
+    Private Sub MetroTile1_Click(sender As Object, e As EventArgs) Handles MetroTile1.Click
+        MetroMessageBox.Show(Me, "", "Próximamente", MessageBoxButtons.OK, MessageBoxIcon.Question)
+    End Sub
 End Class
