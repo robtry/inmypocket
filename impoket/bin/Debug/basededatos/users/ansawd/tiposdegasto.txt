@@ -1,7 +1,0 @@
-Alimentacion
-Educacion
-Entretenimiento
-Hogar
-Servicio
-Salud
-Transporte

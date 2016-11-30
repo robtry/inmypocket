@@ -20,3 +20,21 @@ C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoke
 C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Detashes.resources
 C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoket\obj\Debug\impoket.avatars.resources
 C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoket\obj\Debug\impoket.vbprojResolveAssemblyReference.cache
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\bin\Debug\InMyPocket.exe.config
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\InMyPocket.exe
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\InMyPocket.xml
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\InMyPocket.pdb
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\bin\Debug\InMyPocket.exe
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\bin\Debug\InMyPocket.pdb
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\bin\Debug\InMyPocket.xml
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\bin\Debug\MaterialSkin.pdb
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.vbprojResolveAssemblyReference.cache
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Avatars.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Detashes.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Form1.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Ingresos.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Login.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Resources.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.SplashScreen.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Tiposde.resources
+C:\Users\adria\Desktop\InMyPocketv2\impoket\impoket\obj\Debug\impoket.vbproj.GenerateResource.Cache

@@ -206,6 +206,7 @@ Public Class Form1
     End Sub
 
     Private Sub MetroTile1_Click(sender As Object, e As EventArgs) Handles MetroTile1.Click
-        MetroMessageBox.Show(Me, "", "Próximamente", MessageBoxButtons.OK, MessageBoxIcon.Question)
+        MetroMessageBox.Show(Me, "Procura tener mas ingresos que gastos" + vbCr + "Manten el punto de equilibrio en tus finanzas" + vbCr + "Contempla Todos los movimientos financieros que debes hacer" + vbCr + "No compres por comprar, checa si es necesario", "Consejos Financieros en In My Pocket v1.0", MessageBoxButtons.OK, MessageBoxIcon.Question)
+
     End Sub
 End Class
