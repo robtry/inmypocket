@@ -12,12 +12,11 @@ Module Module1database
     Public Sub ConnectToAccess()
         Dim userubication As String = Login.MetroComboBox1.Text
         usertoconect = userubication
-        Dim boy1 As String
         Try
+            Dim userprofile As String
             Dim avatar As StreamReader = File.OpenText(CurDir() + "\basededatos\users\" + usertoconect + "\avatar.dll")
-            boy1 = avatar.ReadToEnd
-            Form1.PictureBox10.Image = My.Resources.boy1
-            FileClose()
+            userprofile = avatar.ReadToEnd
+            Form1.PictureBox10.Image = Image.FromFile(CurDir() + "\basededatos\avatars\" & userprofile & ".png")
             avatar.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -307,4 +306,5 @@ Module Module1database
             MsgBox(ex.Message)
         End Try
     End Sub
+    '============================================Detashes==================================================================
 End Module

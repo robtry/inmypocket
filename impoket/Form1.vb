@@ -1,8 +1,20 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
 Imports MaterialSkin
+Imports MetroFramework
+
 Public Class Form1
     Public slidepanel As Integer
     Dim year As String
+    Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim resultado As MsgBoxResult
+        resultado = MetroMessageBox.Show(Me, "InMyPocket v1.0", "¿Seguro que deseas salir?", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If resultado = MsgBoxResult.Yes Then
+            End
+        Else
+            e.Cancel = True
+        End If
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SkinManager.ColorScheme = New ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Green200, Accent.Red100, TextShade.WHITE)
         ConnectToAccess()
@@ -157,9 +169,25 @@ Public Class Form1
                 tarjetacase()
         End Select
     End Sub
+    '===============================Ver todo====================================================================
+    Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
+        Select Case whereiam
+            Case 1
+                Detashes.Show()
+                Me.Hide()
+            Case 2
+
+            Case 4
+
+        End Select
+    End Sub
     '======================================Salir==========================================================================
     Private Sub MaterialRaisedButton8_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton8.Click
-        End
+        Dim resultado As MsgBoxResult
+        resultado = MetroMessageBox.Show(Me, "InMyPocket v1.0", "¿Seguro que deseas salir?", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If resultado = MsgBoxResult.Yes Then
+            End
+        End If
     End Sub
     '==================================Errrror================================================
     Private Sub MetroComboBox1_Click(sender As Object, e As EventArgs) Handles MetroComboBox1.Click
