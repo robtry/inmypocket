@@ -117,7 +117,7 @@ Module Module1database
                 Try
                     'insertar
                     cmd.ExecuteNonQuery()
-                    MsgBox("Insertado correctamente")
+                    'MsgBox("Insertado correctamente")
                     limpiartodo()
                 Catch ex As Exception
                     If ex.ToString.Contains("No coinciden los tipos de datos en la expresi") Then
@@ -157,7 +157,7 @@ Module Module1database
                 Try
                     'insertar
                     cmd.ExecuteNonQuery()
-                    MsgBox("Insertado correctamente")
+                    'MsgBox("Insertado correctamente")
                     limpiartodo()
                 Catch ex As Exception
                     If ex.ToString.Contains("No coinciden los tipos de datos en la expresi") Then
@@ -187,7 +187,7 @@ Module Module1database
             Try
                 'insertar
                 cmd.ExecuteNonQuery()
-                MsgBox("Insertado correctamente")
+                ' MsgBox("Insertado correctamente")
                 limpiartodo()
                 dr.Close()
                 leerpresupusto()
@@ -220,6 +220,9 @@ Module Module1database
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+        '//////////////////////////////actualizar el progreesbar////////////////////////////////////////////////////////////
+        'Form1.MetroProgressBar1.ProgressBarStyle = ProgressBarStyle.Continuous
+
     End Sub
     '=================================================Tarjetas========================================================
     Public Sub agregatarjetas()
@@ -240,7 +243,7 @@ Module Module1database
                 Try
                     'insertar
                     cmd.ExecuteNonQuery()
-                    MsgBox("Insertado correctamente")
+                    'MsgBox("Insertado correctamente")
                     limpiartodo()
                 Catch ex As Exception
                     If ex.ToString.Contains("No coinciden los tipos de datos en la expresi") Then

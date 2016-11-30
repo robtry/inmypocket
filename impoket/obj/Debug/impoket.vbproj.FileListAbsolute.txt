@@ -20,4 +20,3 @@ C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoke
 C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Detashes.resources
 C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoket\obj\Debug\impoket.avatars.resources
 C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoket\obj\Debug\impoket.vbprojResolveAssemblyReference.cache
-C:\Users\rober\Documents\Visual Studio 2015\Projects\InMyPocketv2\impoket\impoket\obj\Debug\impoket.Form2.resources

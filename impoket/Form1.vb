@@ -18,6 +18,18 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SkinManager.ColorScheme = New ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Green200, Accent.Red100, TextShade.WHITE)
         ConnectToAccess()
+        'leer
+        gastostotatles()
+        ingresostotales()
+        barrapresupusto()
+        graficaringresos()
+    End Sub
+    Private Sub ActualizarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarToolStripMenuItem.Click
+        'leer
+        gastostotatles()
+        ingresostotales()
+        barrapresupusto()
+        graficaringresos()
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Label10.Text = DateTime.Now
@@ -190,4 +202,6 @@ Public Class Form1
     Private Sub MaterialSingleLineTextField1_Click(sender As Object, e As EventArgs) Handles MaterialSingleLineTextField1.Click
         Me.ErrorProvider1.SetError(MaterialSingleLineTextField1, Nothing)
     End Sub
+
+
 End Class

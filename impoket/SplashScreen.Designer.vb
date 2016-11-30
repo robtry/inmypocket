@@ -149,6 +149,7 @@ Partial Class SplashScreen
         Me.Controls.Add(Me.PictureBox2)
         Me.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.Name = "SplashScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

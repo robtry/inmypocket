@@ -103,8 +103,9 @@ Partial Class Detashes
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.MaterialListView1)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(691, 470)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(555, 470)
+        Me.MinimumSize = New System.Drawing.Size(691, 470)
         Me.Name = "Detashes"
         Me.Sizable = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
